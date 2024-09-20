@@ -2,6 +2,10 @@
 
 set -o xtrace -o nounset -o pipefail -o errexit
 
+if [[ ${build_platform} != ${target_platform} ]]; then
+    export PKG_CONFIG_PATH="${PREFIX}/lib/pkgconfig"
+fi
+
 # check licenses
 cargo-bundle-licenses \
     --format yaml \
