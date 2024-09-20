@@ -23,7 +23,6 @@ requirements:
   host:
     - libiconv  # [osx]
     - openssl
-    - pkg-config  # [build_platform != target_platform]
 
 test:
   commands:
