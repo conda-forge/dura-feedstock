@@ -21,6 +21,7 @@ requirements:
     - cargo-bundle-licenses
     - pkg-config
   host:
+    - libiconv  # [osx]
     - openssl
     - pkg-config  # [build_platform != target_platform]
 
