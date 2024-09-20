@@ -3,7 +3,7 @@
 set -o xtrace -o nounset -o pipefail -o errexit
 
 if [[ ${build_platform} != ${target_platform} ]]; then
-    export PKG_CONFIG_PATH="${PREFIX}/lib/pkgconfig"
+    export OPENSSL_DIR="${PREFIX}"
 fi
 
 # check licenses
